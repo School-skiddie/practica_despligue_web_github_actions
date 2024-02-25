@@ -32,6 +32,14 @@ jobs:
         DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
       run: |
         docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
+    - name: Buildx
+      env:
+        NEW_VERSION: ${{ steps.version.outputs.version }}
+      run: |
+        docker buildx create --name mybuilder
+        docker buildx use mybuilder
+        docker buildx inspect --bootstrap
+        docker buildx build --platform linux/amd64,linux/arm64,linux/arm/v7 -t afuniba/ascii_art:$NEW_VERSION .    
     - name: Build Docker Image
       env:
         NEW_VERSION: ${{ steps.version.outputs.version }}
