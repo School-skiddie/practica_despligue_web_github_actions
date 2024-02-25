@@ -7,15 +7,15 @@ This Project will take an image and print out an [ASCII-art](https://en.wikipedi
 This project uses [opencv](https://www.opencv.org) to process image and [numpy](https://numpy.org) to manipulate arrays. The Image is numerically coded for different threshold regions it comes under and for each coded regions , a symbol is used for printing it out in the stdout.
 
 ## Usage
-Use the Script [make_art.py](https://github.com/Shiny-Akash/python-mini-projects/blob/ascii-art/projects/asciiart/make_art.py) .
+Use the Script [make_art.py](make_art.py) .
 In the command line, Enter
 
 `python3 make_art.py [image_path]`
 
-Replace the `[image_path]` with the image you want to do ascii-art. By default it takes [sample_image.png](https://github.com/Shiny-Akash/python-mini-projects/blob/ascii-art/projects/asciiart/sample_image.png)
+Replace the `[image_path]` with the image you want to do ascii-art. By default it takes [sample_image.png](sample_image.png)
 
 ## Customization
-There are two things you can customize in [make_art.py](https://github.com/Shiny-Akash/python-mini-projects/blob/ascii-art/projects/asciiart/make_art.py).
+There are two things you can customize in [make_art.py](make_art.py).
 
 * `symbols_list`
 * `threshold_list`
